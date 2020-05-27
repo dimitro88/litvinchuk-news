@@ -1,0 +1,19 @@
+<div class="source-container">
+  <span class="source-title">{{ selectedSource || 'Please, select source'}}</span>
+</div>
+<div class="options-container">
+  <div class="select-container">
+    <select class="select" (change)="onSelectChange($event?.target?.value)">
+      <option disabled selected>Select source</option>
+      <option>All Sources</option>
+      <option *ngFor="let source of sources" [selected]="source === selectedSource" [value]="source">{{ source }}</option>
+    </select>
+  </div>
+  <div class="filter-container" [formGroup]="">
+    <input placeholder="Type your text..." class="filter-input" #filter/>
+    <button class="filter-button" mat-raised-button (click)="filterArticles(filter.value)">Filter</button>
+  </div>
+  <div class="add-news-container">
+    <button class="add-button" mat-raised-button (click)="openCreateArticleDialog()">Add Article</button>
+  </div>
+</div>

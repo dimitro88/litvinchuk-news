@@ -1,0 +1,28 @@
+.source-container {
+  background-color: #c1c9d6;
+  box-sizing: border-box;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .source-title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+
+.article-info-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  .article-info {
+    width: 60%;
+    height: 100%;
+  }
+}

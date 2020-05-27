@@ -1,0 +1,83 @@
+.source-container {
+  background-color: #c1c9d6;
+  box-sizing: border-box;
+  border-top: 2px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 1px solid black;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .source-title {
+    font-size: 36px;
+    font-weight: bold;
+  }
+}
+.options-container {
+  height: 80px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top: 1px solid black;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  .select-container {
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    form {
+      width: 100%;
+    }
+    .select {
+      box-sizing: border-box;
+      margin-left: 50px;
+      width: 50%;
+      height: 35px;
+      border: 1px solid black;
+      border-radius: 6px;
+      padding-left: 10px;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  .filter-container {
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .filter-input {
+      border: 1px solid black;
+      border-radius: 6px;
+      padding-left: 10px;
+      box-sizing: border-box;
+      height: 35px;
+      &:focus {
+        outline: none;
+      }
+    }
+    .filter-button {
+      margin-left: 10px;
+      background-color: #c1c9d6;
+      border: 1px solid black;
+    }
+  }
+  .add-news-container {
+    width: calc(100% / 3);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    .add-button {
+      box-sizing: border-box;
+      margin-right: 50px;
+      background-color: #c1c9d6;
+      border: 1px solid black;
+    }
+  }
+}

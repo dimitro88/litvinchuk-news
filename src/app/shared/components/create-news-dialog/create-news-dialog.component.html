@@ -1,0 +1,43 @@
+<div class="add-article-container">
+  <div class="header">
+    <span class="title">Create News</span>
+  </div>
+  <form class="form-container" [formGroup]="createArticleForm">
+    <div class="left-column-container">
+      <div class="heading-container">
+        <span class="input-label">Heading</span>
+        <input class="form-input" formControlName="heading">
+      </div>
+      <div class="description-container">
+        <span class="input-label">Short description</span>
+        <input class="form-input" formControlName="shortDescription">
+      </div>
+      <div class="content-form-field">
+        <span class="input-label">Content</span>
+        <textarea class="content-input" formControlName="fullDescription"></textarea>
+      </div>
+    </div>
+    <div class="right-column-container">
+      <div class="date-container">
+        <span class="input-label">Date</span>
+        <input class="form-input" formControlName="date">
+      </div>
+      <div class="author-container">
+        <span class="input-label">Author</span>
+        <input class="form-input" formControlName="author">
+      </div>
+      <div class="source-container">
+        <span class="input-label">Source</span>
+        <input class="form-input" formControlName="source">
+      </div>
+      <div class="image-url-container">
+        <span class="input-label">Image URL</span>
+        <input class="form-input" formControlName="imageUrl">
+      </div>
+      <div class="buttons-container">
+        <button mat-raised-button [class.disabled]="!createArticleForm.valid" [disabled]="!createArticleForm.valid" (click)="save()">Save</button>
+        <button mat-raised-button (click)="close()">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

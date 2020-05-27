@@ -1,0 +1,17 @@
+<div class="list-item-container" (click)="redirectToArticlePage()">
+  <div class="image-container">
+    <img [src]="newsItem.imageUrl">
+  </div>
+  <div class="short-description-container">
+    <div class="info-container">
+      <span class="heading">{{ newsItem.heading }}</span>
+      <span class="short-description">{{ newsItem.shortDescription }}</span>
+    </div>
+    <div class="read-more-container">
+      <span class="read-more-text">Read more...</span>
+    </div>
+  </div>
+  <div class="date-container">
+    <span>Date: {{ newsItem.date }}</span>
+  </div>
+</div>
