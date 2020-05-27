@@ -9,11 +9,11 @@ export class DatabaseService {
 
   constructor() { }
 
-  private static generateId(): string {
+  public static generateId(): string {
     return uuidv4();
   }
 
-  saveEntity<T>(table: DatabaseTablesEnum, data: T): T {
+  saveEntity<T>(table: DatabaseTablesEnum, data: Omit<T, 'id'>): T {
     const dataWithId = {
       ...data,
       id: DatabaseService.generateId()

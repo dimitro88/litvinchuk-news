@@ -40,7 +40,7 @@ export class ArticlesService {
     return this.filteredArticles$;
   }
 
-  constructor(private databaseService: DatabaseService) {
+  constructor(public databaseService: DatabaseService) {
     const articles: Article[] = this.databaseService.getAll(DatabaseTablesEnum.Articles);
     this.setInitialSources(articles);
     this.setInitialArticles(articles);

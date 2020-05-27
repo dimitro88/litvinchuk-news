@@ -20,7 +20,7 @@ export class NewsByIdComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(() => {
-      this.paramId = this.route.snapshot.params.id;
+      this.paramId = this.route.snapshot?.params?.id;
       this.getArticleInfo(this.paramId);
     });
   }

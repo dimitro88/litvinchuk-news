@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewsByIdComponent } from './news-by-id.component';
+import {ActivatedRoute} from '@angular/router';
+import {of} from 'rxjs';
 
 describe('NewsByIdComponent', () => {
   let component: NewsByIdComponent;
@@ -8,7 +10,21 @@ describe('NewsByIdComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewsByIdComponent ]
+      declarations: [ NewsByIdComponent ],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            paramMap: of({
+              snapshot: {
+                params: {
+                  id: '123'
+                }
+              }
+            })
+          }
+        }
+      ]
     })
     .compileComponents();
   }));
