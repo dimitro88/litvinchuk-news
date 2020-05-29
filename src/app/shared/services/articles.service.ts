@@ -108,11 +108,13 @@ export class ArticlesService {
 
   private filterArticles(articles: Article[]): void {
     const currentSource = this.currentSource$.value;
+    console.log(articles, this.currentSource$.value);
     if (articles) {
       const filteredArticles = articles.filter((article: Article) => article.source === currentSource);
       this.currentArticles$.next(filteredArticles);
+    } else {
+      this.currentArticles$.next([]);
     }
-    this.currentArticles$.next([]);
     this.filterCurrentArticles(this.filterValue);
   }
 }
